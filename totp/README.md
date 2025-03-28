@@ -2,6 +2,14 @@
 
 TOTP (Time-based One-Time Password) is a dynamic authentication mechanism that enhances account security by generating time-sensitive passwords. This plugin provides TOTP verification and key generation capabilities for the Dify platform.
 
+## Getting Started
+
+Repository: [dify-plugins-collections/totp](https://github.com/alterxyz/dify-plugins-collections/tree/main/totp)
+
+For issues, bug reports, or feature requests, please visit our [Issues page](https://github.com/alterxyz/dify-plugins-collections/issues).
+
+Feel free to contribute or provide feedback to help improve this plugin!
+
 ## Features
 
 This plugin offers two main tools:
