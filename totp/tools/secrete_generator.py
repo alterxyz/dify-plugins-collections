@@ -10,9 +10,12 @@ class SecretGenerator(Tool):
     def _invoke(self, tool_parameters: dict[str, Any]) -> Generator[ToolInvokeMessage]:
         secret_key = pyotp.random_base32()
         yield self.create_text_message(secret_key)
-
-        name = tool_parameters["name"]
-        issuer_name = tool_parameters["issuer_name"]
+        try:
+            name = tool_parameters["name"]
+            issuer_name = tool_parameters["issuer_name"]
+        except KeyError:
+            name = None
+            issuer_name = None
         if name or issuer_name:
             provisioned_secret_key = pyotp.totp.TOTP(secret_key).provisioning_uri(name=name, issuer_name=issuer_name)
             yield self.create_variable_message("provisioned_secret_key", provisioned_secret_key)
