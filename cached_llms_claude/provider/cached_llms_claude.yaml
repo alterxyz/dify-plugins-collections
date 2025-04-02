@@ -1,0 +1,17 @@
+identity:
+  author: alterxyz
+  name: cached_llms_claude
+  label:
+    en_US: cached_llms_claude
+    zh_Hans: cached_llms_claude
+    pt_BR: cached_llms_claude
+  description:
+    en_US: Anthropic llms with prompt caching
+    zh_Hans: Anthropic llms with prompt caching
+    pt_BR: Anthropic llms with prompt caching
+  icon: icon.svg
+tools:
+  - tools/cached_llms_claude.yaml
+extra:
+  python:
+    source: provider/cached_llms_claude.py

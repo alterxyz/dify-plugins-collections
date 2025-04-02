@@ -1,0 +1,30 @@
+identity:
+  name: cached_llms_claude
+  author: alterxyz
+  label:
+    en_US: cached_llms_claude
+    zh_Hans: cached_llms_claude
+    pt_BR: cached_llms_claude
+description:
+  human:
+    en_US: Anthropic llms with prompt caching
+    zh_Hans: Anthropic llms with prompt caching
+    pt_BR: Anthropic llms with prompt caching
+  llm: Anthropic llms with prompt caching
+parameters:
+  - name: query
+    type: string
+    required: true
+    label:
+      en_US: Query string
+      zh_Hans: 查询语句
+      pt_BR: Query string
+    human_description:
+      en_US: Anthropic llms with prompt caching
+      zh_Hans: Anthropic llms with prompt caching
+      pt_BR: Anthropic llms with prompt caching
+    llm_description: Anthropic llms with prompt caching
+    form: llm
+extra:
+  python:
+    source: tools/cached_llms_claude.py
