@@ -17,6 +17,7 @@ This plugin offers two main tools:
 1. **TOTP Validator**
 
     - Validates 6-digit TOTP codes submitted by users
+    - Supports both secret keys and provisioning URIs
 
 2. **TOTP Key Generator**
     - Generates standard-compliant TOTP secret keys
@@ -28,7 +29,7 @@ This plugin offers two main tools:
 
 To validate a TOTP code:
 
-- **secret_key**: TOTP secret key (required)
+- **secret_key**: TOTP secret key or provisioning URI (required)
 - **user_code**: 6-digit verification code from user (required)
 
 Returns:
@@ -49,7 +50,20 @@ To generate a new TOTP key:
 Returns:
 
 - Generated secret key
-- Provisioned secret key (when account name and issuer name are provided)
+- Provisioning URI (when account name and issuer name are provided)
+
+## Compatibility with Authenticator Apps
+
+Different authenticator applications have varying levels of support for TOTP setup methods:
+
+- **BitWarden**: Supports both secret keys and provisioning URIs
+- **Google Authenticator**: QR code scanning supports provisioning URIs only, manual entry supports secret keys only (requires user to input account name)
+- **Microsoft Authenticator**: QR code scanning supports provisioning URIs only
+- **Other apps**: Support varies; refer to the specific application's documentation
+
+When implementing TOTP authentication:
+- For maximum compatibility, provide both the secret key and a QR code containing the provisioning URI
+- For manual setup, ensure users have access to the secret key and relevant account/issuer information
 
 ### Example
 
