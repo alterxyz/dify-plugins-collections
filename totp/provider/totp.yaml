@@ -12,7 +12,7 @@ identity:
   icon: lock-password-line.svg
 tools:
   - tools/totp.yaml
-  - tools/secrete_generator.yaml
+  - tools/secret_generator.yaml
 extra:
   python:
     source: provider/totp.py

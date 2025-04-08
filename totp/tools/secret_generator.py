@@ -17,7 +17,7 @@ class SecretGenerator(Tool):
             name = None
             issuer_name = None
         if name or issuer_name:
-            provisioned_secret_key = pyotp.totp.TOTP(secret_key).provisioning_uri(name=name, issuer_name=issuer_name)
-            yield self.create_variable_message("provisioned_secret_key", provisioned_secret_key)
+            provisioning_uri = pyotp.totp.TOTP(secret_key).provisioning_uri(name=name, issuer_name=issuer_name)
+            yield self.create_variable_message("provisioning_uri", provisioning_uri)
         else:
             pass
