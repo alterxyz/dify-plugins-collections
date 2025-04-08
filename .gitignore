@@ -1,6 +1,7 @@
 telegraph/
 .venv
 demo.py
+demo.md
 dpd
 *.difypkg
 
