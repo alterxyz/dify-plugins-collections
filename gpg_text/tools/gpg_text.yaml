@@ -1,0 +1,30 @@
+identity:
+  name: gpg_text
+  author: alterxyz
+  label:
+    en_US: gpg_text
+    zh_Hans: gpg_text
+    pt_BR: gpg_text
+description:
+  human:
+    en_US: Encrypt, decrypt, sign, and verify text messages using GPG (GnuPG).
+    zh_Hans: Encrypt, decrypt, sign, and verify text messages using GPG (GnuPG).
+    pt_BR: Encrypt, decrypt, sign, and verify text messages using GPG (GnuPG).
+  llm: Encrypt, decrypt, sign, and verify text messages using GPG (GnuPG).
+parameters:
+  - name: query
+    type: string
+    required: true
+    label:
+      en_US: Query string
+      zh_Hans: 查询语句
+      pt_BR: Query string
+    human_description:
+      en_US: Encrypt, decrypt, sign, and verify text messages using GPG (GnuPG).
+      zh_Hans: Encrypt, decrypt, sign, and verify text messages using GPG (GnuPG).
+      pt_BR: Encrypt, decrypt, sign, and verify text messages using GPG (GnuPG).
+    llm_description: Encrypt, decrypt, sign, and verify text messages using GPG (GnuPG).
+    form: llm
+extra:
+  python:
+    source: tools/gpg_text.py

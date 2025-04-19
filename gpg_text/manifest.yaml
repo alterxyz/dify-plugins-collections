@@ -1,0 +1,36 @@
+version: 0.0.1
+type: plugin
+author: alterxyz
+name: gpg_text
+label:
+  en_US: GPG Text Tools
+  ja_JP: gpg_text
+  zh_Hans: GPG 文本工具
+  pt_BR: gpg_text
+description:
+  en_US: "A collection of tools for GPG operations: encrypt, decrypt, sign, verify messages, and generate key pairs using pgpy."
+  ja_JP: "Encrypt, decrypt, sign, and verify text messages using GPG (GnuPG)."
+  zh_Hans: "一套用于 GPG 操作的工具集：使用 pgpy 进行消息加密、解密、签名、验证以及生成密钥对。"
+  pt_BR: "Encrypt, decrypt, sign, and verify text messages using GPG (GnuPG)."
+icon: icon.svg
+resource:
+  memory: 268435456
+  permission: {}
+plugins:
+  tools:
+    - provider/gpg_text.yaml
+meta:
+  version: 0.0.1
+  arch:
+    - amd64
+    - arm64
+  runner:
+    language: python
+    version: "3.12"
+    entrypoint: main
+created_at: 2025-04-19T16:35:53.616878+08:00
+privacy: PRIVACY.md
+tags:
+  - utilities
+  - security
+verified: false
