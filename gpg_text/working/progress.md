@@ -17,8 +17,5 @@
 - [x] Update `README.md` with detailed usage instructions for each tool.
 - [x] Create `PRIVACY.md` detailing data handling.
 - [ ] Consider adding i18n for all user-facing strings (labels, descriptions). (Partially done)
+- [x] [2025-04-19] Conducted plugin review and identified areas for improvement (i18n, cleanup, testing).
 
-## Next Steps
-
-- Perform integration testing.
-- Add more translations (i18n).

@@ -1,38 +1,11 @@
-# GPG Text Plugin 项目分析
+# GPG Text Plugin 项目分析 (Updated 2025-04-19)
 
 ## 项目状态
 
-目前项目处于初始阶段，完成了以下内容：
-- 通过 `dify plugin init` 初始化了基本的项目结构
-- 有基本的插件配置信息（manifest.yaml）
-- 设置了插件的基本功能：使用GPG（GnuPG）加密、解密、签名和验证文本消息
-- 文件结构包含了必要的组件：provider、tools和基本配置文件
-- 代码框架已初始化，但具体功能尚未实现
-
-## 需要完成的工作
-
-1. **开发实现功能**：
-   - 设计并实现GPG相关的核心功能（加密、解密、签名、验证）
-   - 可能需要创建utils工具函数
-   - 完善tools/gpg_text.py中的_invoke功能实现
-   - 完善provider/gpg_text.py中的验证功能
-
-2. **扩展工具参数配置**：
-   - 目前tools/gpg_text.yaml只有一个简单的query参数
-   - 需要为GPG功能增加更多参数，如操作类型（加密/解密/签名/验证）、密钥ID等
-
-3. **文档完善**：
-   - 完成README.md
-   - 填写PRIVACY.md隐私政策
-   - 添加使用说明和示例
-
-4. **测试和部署**：
-   - 本地测试功能
-   - 准备打包和发布
-
-## 下一步计划
-
-1. 创建utils工具函数，实现GPG操作的基础功能
-2. 扩展和完善YAML配置，增加必要的参数
-3. 实现tools和provider中的核心功能
-4. 编写测试和文档
+目前项目已完成核心功能的开发，包括：
+- 使用 `pgpy` 库实现了 GPG 加密、解密、签名、验证和密钥生成功能，封装在 `utils/the_gpg.py` 中。
+- 为每个核心功能创建了独立的工具（`.py` 和 `.yaml` 文件）在 `tools/` 目录下。
+- 更新了 `provider/gpg_text.yaml` 以包含所有工具。
+- 更新了 `manifest.yaml` 的基本信息。
+- 创建了详细的 `README.md` 和 `PRIVACY.md`。
+- 文件结构遵循 Dify 插件规范。
