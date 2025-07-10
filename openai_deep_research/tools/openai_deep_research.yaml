@@ -1,0 +1,30 @@
+identity:
+  name: "openai_deep_research"
+  author: "alterxyz"
+  label:
+    en_US: "openai_deep_research"
+    zh_Hans: "openai_deep_research"
+    pt_BR: "openai_deep_research"
+description:
+  human:
+    en_US: "OpenAI Deep Research. Start task, get status or result."
+    zh_Hans: "OpenAI Deep Research. Start task, get status or result."
+    pt_BR: "OpenAI Deep Research. Start task, get status or result."
+  llm: "OpenAI Deep Research. Start task, get status or result."
+parameters:
+  - name: query
+    type: string
+    required: true
+    label:
+      en_US: Query string
+      zh_Hans: 查询语句
+      pt_BR: Query string
+    human_description:
+      en_US: "OpenAI Deep Research. Start task, get status or result."
+      zh_Hans: "OpenAI Deep Research. Start task, get status or result."
+      pt_BR: "OpenAI Deep Research. Start task, get status or result."
+    llm_description: "OpenAI Deep Research. Start task, get status or result."
+    form: llm
+extra:
+  python:
+    source: tools/openai_deep_research.py

@@ -1,0 +1,39 @@
+identity:
+  name: get_research_result
+  author: alterxyz # Please replace with your name
+  label:
+    en_US: Get Deep Research Task Result
+    zh_Hans: 获取深度研究任务结果
+    pt_BR: Obter Resultado da Tarefa de Pesquisa Profunda
+  description:
+    human:
+      en_US: Retrieves the result or status of a deep research task.
+      zh_Hans: 检索深度研究任务的结果或状态。
+      pt_BR: Recupera o resultado ou status de uma tarefa de pesquisa profunda.
+    llm: This tool retrieves the result or status of a previously started deep research task using its task ID. It returns the research content in Markdown format if completed, or the current status otherwise.
+parameters:
+  - name: task_id
+    type: string
+    required: true
+    label:
+      en_US: Task ID
+      zh_Hans: 任务 ID
+      pt_BR: ID da Tarefa
+    human_description:
+      en_US: The ID of the research task you want to get the result for.
+      zh_Hans: 您想要获取结果的研究任务的 ID。
+      pt_BR: O ID da tarefa de pesquisa para a qual você deseja obter o resultado.
+    llm_description: The unique identifier of the deep research task, obtained when the task was started.
+    form: llm
+extra:
+  python:
+    source: tools/get_research_result.py
+output_schema:
+  type: object
+  properties:
+    status:
+      type: string
+      description: The current status of the task (e.g., 'queued', 'running', 'completed', 'failed').
+    result:
+      type: string
+      description: The research result in Markdown format if the task is completed.

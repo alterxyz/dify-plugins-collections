@@ -1,0 +1,30 @@
+identity:
+  name: "start_research"
+  author: "alterxyz" # Please replace with your name
+  label:
+    en_US: "Start New Deep Research Task"
+    zh_Hans: "启动新的深度研究任务"
+    pt_BR: "Iniciar Nova Tarefa de Pesquisa Profunda"
+  description:
+    human:
+      en_US: "Starts a new deep research task with a given prompt."
+      zh_Hans: "使用给定的提示启动一个新的深度研究任务。"
+      pt_BR: "Inicia uma nova tarefa de pesquisa profunda com um prompt fornecido."
+    llm: "This tool starts a new deep research task using the OpenAI API. It takes a user prompt as input and returns a task ID, which can be used later to retrieve the research results."
+parameters:
+  - name: prompt
+    type: string
+    required: true
+    label:
+      en_US: Research Prompt
+      zh_Hans: 研究提示
+      pt_BR: Prompt de Pesquisa
+    human_description:
+      en_US: "The topic or question for the deep research."
+      zh_Hans: "深度研究的主题或问题。"
+      pt_BR: "O tópico ou pergunta para a pesquisa profunda."
+    llm_description: "The detailed prompt or question for the deep research task."
+    form: llm
+extra:
+  python:
+    source: tools/start_research.py

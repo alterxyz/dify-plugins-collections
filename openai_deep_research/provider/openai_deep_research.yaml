@@ -1,0 +1,17 @@
+identity:
+  author: "alterxyz"
+  name: "openai_deep_research"
+  label:
+    en_US: "openai_deep_research"
+    zh_Hans: "openai_deep_research"
+    pt_BR: "openai_deep_research"
+  description:
+    en_US: "OpenAI Deep Research. Start task, get status or result."
+    zh_Hans: "OpenAI Deep Research. Start task, get status or result."
+    pt_BR: "OpenAI Deep Research. Start task, get status or result."
+  icon: "icon.svg"
+tools:
+  - tools/openai_deep_research.yaml
+extra:
+  python:
+    source: provider/openai_deep_research.py
