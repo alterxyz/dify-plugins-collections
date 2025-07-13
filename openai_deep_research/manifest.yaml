@@ -3,14 +3,14 @@ type: plugin
 author: alterxyz
 name: openai_deep_research
 label:
-  en_US: openai_deep_research
-  ja_JP: openai_deep_research
-  zh_Hans: openai_deep_research
-  pt_BR: openai_deep_research
+  en_US: OpenAI Deep Research
+  ja_JP: OpenAI Deep Research
+  zh_Hans: OpenAI深度研究助手
+  pt_BR: OpenAI Deep Research
 description:
-  en_US: OpenAI Deep Research. Start task, get status or result.
+  en_US: "OpenAI Deep Research plugin for comprehensive topic analysis. Create research tasks, track progress, and retrieve detailed results."
   ja_JP: OpenAI Deep Research. Start task, get status or result.
-  zh_Hans: OpenAI Deep Research. Start task, get status or result.
+  zh_Hans: "OpenAI深度研究插件，用于全面主题分析。创建研究任务，跟踪进度，获取详细结果。"
   pt_BR: OpenAI Deep Research. Start task, get status or result.
 icon: icon.svg
 resource:

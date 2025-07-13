@@ -2,28 +2,28 @@ identity:
   name: "openai_deep_research"
   author: "alterxyz"
   label:
-    en_US: "openai_deep_research"
-    zh_Hans: "openai_deep_research"
-    pt_BR: "openai_deep_research"
+    en_US: "Start New Deep Research"
+    zh_Hans: "启动新的深度研究任务"
+    pt_BR: "Iniciar Nova Pesquisa Profunda"
 description:
   human:
-    en_US: "OpenAI Deep Research. Start task, get status or result."
-    zh_Hans: "OpenAI Deep Research. Start task, get status or result."
-    pt_BR: "OpenAI Deep Research. Start task, get status or result."
-  llm: "OpenAI Deep Research. Start task, get status or result."
+    en_US: "Starts a new deep research task with a given prompt."
+    zh_Hans: "根据给定的提示创建并启动一个新的深度研究任务。"
+    pt_BR: "Inicia uma nova tarefa de pesquisa profunda com um prompt fornecido."
+  llm: "This tool initiates a new deep research task using the OpenAI API. It takes a detailed user prompt as input and returns a task ID. This task ID can be used later with the 'openai_deep_research_get' tool to retrieve the comprehensive research results once the analysis is complete."
 parameters:
-  - name: query
+  - name: prompt
     type: string
     required: true
     label:
-      en_US: Query string
-      zh_Hans: 查询语句
-      pt_BR: Query string
+      en_US: Research Prompt
+      zh_Hans: 研究问题
+      pt_BR: Conteúdo da Pesquisa
     human_description:
-      en_US: "OpenAI Deep Research. Start task, get status or result."
-      zh_Hans: "OpenAI Deep Research. Start task, get status or result."
-      pt_BR: "OpenAI Deep Research. Start task, get status or result."
-    llm_description: "OpenAI Deep Research. Start task, get status or result."
+      en_US: "The topic or question for the deep research."
+      zh_Hans: "需要深入研究的具体主题、问题或研究方向。"
+      pt_BR: "O tópico ou pergunta para a pesquisa profunda."
+    llm_description: "The detailed prompt or question for the deep research task. Be specific and comprehensive to ensure the research provides valuable insights on your topic of interest."
     form: llm
 extra:
   python:
