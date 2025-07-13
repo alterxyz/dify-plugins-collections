@@ -25,6 +25,31 @@ parameters:
       pt_BR: "O tópico ou pergunta para a pesquisa profunda."
     llm_description: "The detailed prompt or question for the deep research task. Be specific and comprehensive to ensure the research provides valuable insights on your topic of interest."
     form: llm
+  - name: model
+    type: select
+    required: true
+    label:
+      en_US: Model
+      zh_Hans: 模型
+      pt_BR: Modelo
+    human_description:
+      en_US: "Select which model to use for the deep research."
+      zh_Hans: "选择用于深度研究的模型。"
+      pt_BR: "Selecione qual modelo usar para a pesquisa profunda."
+    llm_description: "The model to use for the deep research task. `o4-mini-deep-research` is newer and may provide better results."
+    form: form
+    default: o4-mini-deep-research
+    options:
+      - label:
+          en_US: o4-mini-deep-research
+          zh_Hans: o4-mini-deep-research
+          pt_BR: o4-mini-deep-research
+        value: o4-mini-deep-research
+      - label:
+          en_US: o3-deep-research
+          zh_Hans: o3-deep-research
+          pt_BR: o3-deep-research
+        value: o3-deep-research
 extra:
   python:
     source: tools/openai_deep_research.py

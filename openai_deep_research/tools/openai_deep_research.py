@@ -13,9 +13,10 @@ class OpenaiDeepResearchTool(Tool):
             "apikey"
         ]
         prompt = tool_parameters["prompt"]
+        model = tool_parameters["model"]
         client = OpenAI(api_key=api_key)
         resp = client.responses.create(
-            model="o4-mini-deep-research",
+            model=model,
             # Options: "low", "medium", "high"; o4-mini only support "medium"
             reasoning={
                 "effort": "medium",
